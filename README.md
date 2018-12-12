@@ -21,6 +21,24 @@ Run `Compile.WIN - Debug.bat` for development, attaching a debugger and/or exten
 Run `Compile.WIN - Release.bat` for production environment (-debug is still a supported parameter for script debugging).
 
 After this you can run the server by executing `ServUO.exe`.
+#### Debian 9.x
+'git clone git@github.com:ServUO/ServUO.git'
+
+'cd ServUO'
+
+`apt install apt-transport-https dirmngr`
+`apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF`
+`echo "deb https://download.mono-project.com/repo/debian stable-stretch main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list`
+`apt update`
+`apt install mono-complete`
+
+'make clean'
+'make'
+
+'./ServUO.sh'
+
+Complete guide is available here:
+https://www.servuo.com/tutorials/yet-another-debian-servuo-tutorial.44/
 
 #### OSX
 
